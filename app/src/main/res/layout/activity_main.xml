@@ -17,16 +17,16 @@
         android:text="@string/score"
         android:textAlignment="center"
         android:textColor="@color/white"
-        android:textSize="45sp"
+        android:textSize="55sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.12"
+        app:layout_constraintHorizontal_bias="0.098"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.094" />
+        app:layout_constraintVertical_bias="0.024" />
 
     <TextView
-        android:id="@+id/coinCounter"
+        android:id="@+id/balance"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
@@ -34,43 +34,45 @@
         android:text="1"
         android:textAlignment="center"
         android:textColor="@color/white"
-        android:textSize="40sp"
+        android:textSize="50sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.028"
+        app:layout_constraintHorizontal_bias="0.031"
         app:layout_constraintStart_toEndOf="@+id/textView2"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.101" />
+        app:layout_constraintVertical_bias="0.033" />
 
     <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="291dp"
-        android:layout_height="371dp"
+        android:id="@+id/chocolateBtn"
+        android:layout_width="279dp"
+        android:layout_height="378dp"
         android:theme="@style/BtnTheme"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.475"
+        app:layout_constraintVertical_bias="0.403"
         app:srcCompat="@drawable/chocolate_main" />
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/shopBtn"
-        android:layout_width="214dp"
-        android:layout_height="81dp"
+    <Button
+        android:id="@+id/shopBtn2"
+        android:layout_width="263dp"
+        android:layout_height="106dp"
         android:layout_marginStart="99dp"
         android:layout_marginTop="52dp"
         android:layout_marginEnd="100dp"
-        android:layout_marginBottom="57dp"
+        android:layout_marginBottom="40dp"
         android:backgroundTint="@color/orange"
-        android:fontFamily="@font/bold"
+        android:textStyle="bold"
         android:text="SHOP"
-        android:textSize="25dp"
-        app:cornerRadius="70px"
+        android:textColor="@color/grey_main"
+        android:textSize="40dp"
+        app:cornerRadius="100px"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/chocolateBtn"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

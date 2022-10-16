@@ -18,4 +18,13 @@
         <item name="android:buttonStyle">@style/button</item>
     </style>
 
+    <style name="Theme.ChocolateClicker.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.ChocolateClicker.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.ChocolateClicker.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
 </resources>

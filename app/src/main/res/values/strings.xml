@@ -2,4 +2,7 @@
     <string name="app_name">Chocolate Clicker</string>
     <string name="score">Score: </string>
     <string name="shop">SHOP</string>
+    <string name="title_activity_shop">Shop</string>
+    <string name="balance">Balance: </string>
+    <string name="count">Count: </string>
 </resources>
