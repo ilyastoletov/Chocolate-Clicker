@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Chocolate Clicker</string>
+    <string name="score">Score: </string>
+    <string name="shop">SHOP</string>
 </resources>
