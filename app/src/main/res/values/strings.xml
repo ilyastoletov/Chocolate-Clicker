@@ -5,4 +5,9 @@
     <string name="title_activity_shop">Shop</string>
     <string name="balance">Balance: </string>
     <string name="count">Count: </string>
+    <string name="price">Price: </string>
+    <string name="autoclicker">Autoclicker</string>
+    <string name="factory">Chocolate Factory</string>
+    <string name="city">Chocolate City</string>
+    <string name="god">Chocolate God</string>
 </resources>
