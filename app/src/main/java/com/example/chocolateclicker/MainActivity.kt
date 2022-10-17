@@ -7,18 +7,34 @@ import android.view.View
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
 import android.widget.Button
+import android.widget.ImageView
+import android.widget.TextView
 
 class MainActivity : AppCompatActivity() {
+
+    var counter: Int = 0
+    lateinit var counterText: TextView
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        counterText = findViewById(R.id.balance)
 
         val shopBtnAnim: Animation = AnimationUtils.loadAnimation(this, R.anim.shop_btn_anim)
         val shopBtn: Button = findViewById(R.id.shopBtn2)
+        val chocolateBtn: ImageView = findViewById(R.id.chocolateBtn)
+
         shopBtn.setOnClickListener { v ->
             v.startAnimation(shopBtnAnim)
             val shopIntent = Intent(this, Shop::class.java)
             startActivity(shopIntent)
+        }
+
+        val chocolateAnim: Animation = AnimationUtils.loadAnimation(this, R.anim.chocolate_anim)
+        chocolateBtn.setOnClickListener { v ->
+                v.startAnimation(chocolateAnim)
+                counter++
+                counterText.text = counter.toString()
         }
     }
 }
