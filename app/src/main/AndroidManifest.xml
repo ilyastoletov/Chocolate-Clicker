@@ -15,6 +15,7 @@
         <activity
             android:name=".Shop"
             android:exported="true"
+            android:screenOrientation="portrait"
             android:theme="@style/Theme.ChocolateClicker.NoActionBar">
             <meta-data
                 android:name="android.app.lib_name"
@@ -23,6 +24,7 @@
         <activity
             android:name=".MainActivity"
             android:exported="true"
+            android:screenOrientation="portrait"
             android:theme="@style/Theme.ChocolateClicker.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
