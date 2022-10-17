@@ -40,16 +40,18 @@ class MainActivity : AppCompatActivity() {
         val chocolateAnim: Animation = AnimationUtils.loadAnimation(this, R.anim.chocolate_anim)
         chocolateBtn.setOnClickListener { v ->
                 v.startAnimation(chocolateAnim)
-                counter++
+                counter += 500
                 counterText.text = counter.toString()
         }
         threadStarted = true
         startThread()
     }
 
-    override fun onStart() {
-        super.onStart()
+    override fun onResume() {
+        super.onResume()
         threadStarted = true
+        counter = pref?.getInt("counter", 0)!!
+        counterText.text = counter.toString()
     }
 
     fun saveData(key: String, value: Int) {
@@ -64,21 +66,25 @@ class MainActivity : AppCompatActivity() {
                 while (threadStarted) {
                     val autoClickerCount: Int = pref?.getInt("autoclickerCount", 0)!!
                     val factoryCount: Int = pref?.getInt("factoryCount", 0)!!
-                    val cityCount: Int = pref?.getInt("cityCount", 0)!!
-                    val godCount: Int = pref?.getInt("godCount", 0)!!
-                    println("$autoClickerCount, $factoryCount, $cityCount, $godCount")
+                    val cityCount: Int = pref?.getInt("cityCounter", 0)!!
+                    val godCount: Int = pref?.getInt("godCounter", 0)!!
+                    /*println("$autoClickerCount, $factoryCount, $cityCount, $godCount")*/
                     Thread.sleep(1000)
                     counter += autoClickerCount * 1
                     counter += factoryCount * 50
                     counter += cityCount * 500
                     counter += godCount * 10000
-                    saveData("counter", counter)
                     runOnUiThread(Runnable {
                         counterText.text = counter.toString()
                     })
                 }
             }).start()
         }
+    }
+
+    override fun onPause() {
+        super.onPause()
+        saveData("counter", counter)
     }
 
     override fun onDestroy() {
